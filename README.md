@@ -1,37 +1,48 @@
-# Sprint-1-JavaADV
+# ProspAI
 
-Produza pelo menos um dos domínios da sua solução tecnológica proposta utilizando Java e Spring. Esta solução deverá ser capaz de persistir, manter e consultar os dados em um SGBD Relacional (Preferencialmente Oracle). Os dados gerados por meio da solução de TI proposta pela equipe será primordial para a construção da IA generativa e do deep analytics que foram solicitados pelo cliente para a tomada de decisões estratégicas (baseadas em análise de dados e modelos preditivos).
+## Integrantes do Grupo
+- AGATHA PIRES – RM552247 – (2TDSPH) - MOBILE APPLICATION DEVELOPMENT / MASTERING RELATIONAL AND NON-RELATIONAL DATABASE
+- DAVID BRYAN VIANA – RM551236 – (2TDSPM) - ADVANCED BUSINESS DEVELOPMENT WITH .NET / MOBILE APPLICATION DEVELOPMENT
+- GABRIEL LIMA – RM99743 – (2TDSPM) - COMPLIANCE, QUALITY ASSURANCE & TESTS / DISRUPTIVE ARCHITECTURES: IOT, IOB & GENERATIVE IA
+- GIOVANNA ALVAREZ – RM98892 – (2TDSPM) - COMPLIANCE, QUALITY ASSURANCE & TESTS / DEVOPS TOOLS & CLOUD COMPUTING
+- MURILO MATOS – RM552525 – (2TDSPM) - JAVA ADVANCED / DEVOPS TOOLS & CLOUD COMPUTING
 
-Portanto, você deverá:
+## Instruções para Executar a Aplicação
+Para executar o projeto ProspAI, siga estas etapas:
+1. Certifique-se de ter o Java Development Kit (JDK) instalado em sua máquina.
+2. Clone o repositório do projeto para sua máquina local.
+3. Abra o projeto em sua IDE preferida.
+4. Execute o aplicativo como um aplicativo Spring Boot.
 
-Criar aplicação Java com Spring Boot que ajude a resolver um problema (utilize a criatividade). A aplicação deverá respeitar os fundamentos da Programação Orientada a Objetos e as classes de entidade deverão estar relacionadas e mapeadas com JPA e deverá ainda:
+## Imagem dos Diagramas
+Você pode encontrar a documentação e os testes na pasta `DOCUMENTAÇÃO`.
 
-Conter código que respeite a coesão e o desacoplamento;
-Respeitar os padrões DTO e utilizar a Bean Validation;
-Respeitar os conceitos fundamentais do REST (RESTful);
-Na primeira Sprint, a API deverá estar de acordo com o modelo de maturidade nível 1;
-Utilizar os Design Patterns como Singleton, Repositoy com Genérics quando necessário;
-Poderá utilizar a JPQL e/ou Spring JPA Query Methods ;
-A Gestão de Configuração dos artefatos de software deverá ser demonstrada pela equipe, portanto todos os artefatos produzidos deverão estar no Github e os professores deverão ter acesso ao repositório.
-Apresentar os testes dos endpoints da API (Utilize o Postman ou Insominia) exporte as requisições para que o professor possa validar o funcionamento.
+## Endpoints da API
 
-Como você será pontuado:
+### AdminController
+O AdminController é responsável por manipular as operações relacionadas à administração do sistema, como obtenção de configurações do sistema, listagem de usuários e monitoramento de desempenho.
 
-(até 5 Pontos) Apresentar o cronograma de desenvolvimento e respeitar os prazos. Crie um o documento dizendo quem fará o que e quando a atividade deverá ser ou foi realizada;
-(até 10 Pontos) Imagens explicativas da arquitetura, definição das classes de domínio da aplicação e o respectivo Diagrama de Classes de Entidade. O Diagrama de Entidade e Relacionamento (DER) e o Diagrama de Classe das Entidades deverão ser coerentes. Se necessário faça uma breve explicação sobre os relacionamentos e as constraints envolvidas;
-(até 40 Pontos) Implementação das classes de Entidade necessárias para solução do problema que se propõe resolver. Atenção ao correto encapsulamento, à tipagem dos atributos e ao Mapeamento Objeto Relacional com JPA e Hibernate (A equipe deverá demonstrar a cada Sprint que houve evolução em relação à sprint anterior);
-(até 15 Pontos) A aplicação respeita os conceitos fundamentais do REST criados por Roy Fielding (RESTful) e API está de acordo com o modelo de maturidade nível 1 proposto por Leonard Richardson.
-(até 10 Pontos) A Gestão de Configuração dos Artefatos de Software foram demonstrados pela equipe. Ou seja, todos os artefatos produzidos estão no Github e os professores têm acesso ao repositório.
-(até 10 pontos) Envio do link para o projeto público compartilhado no github contendo entre outros:
+#### Endpoints:
+- `/api/admin/configuracao`: Retorna as configurações do sistema.
+- `/api/admin/usuarios`: Retorna a lista de usuários do sistema.
+- `/api/admin/desempenho`: Monitora o desempenho do sistema.
 
-Toda documentação;
-Código-fonte;
-Arquivo README.md com texto contendo:
+### ClienteController
+O ClienteController gerencia as operações relacionadas aos clientes, como listar clientes, obter um cliente por ID, cadastrar, atualizar e excluir um cliente.
 
-Nome da aplicação;
-Nome completo e breve apresentação dos integrantes do Grupo (Atividade da qual ficou responsável no projeto);
-instrução de como rodar a aplicação;
-imagem dos diagramas;
-link para vídeo apresentando a Proposta Tecnológica, o público-alvo da aplicação e os problemas que a aplicação se propõe a solucionar;
-Listagem de todos os endpoints (Documentação da API);
-(até 10 pontos) Se a equipe demonstrou preocupação em testar a aplicação e provou com documentos. Disponibilizou arquivos para que o professor seja capaz de realizar teste dos endpoints e houve, após os testes, a perfeita persistência e recuperação dos dados. (exporte do Postman ou do Insominia as requisições aos endpoints). Inclua na pasta documentos do projeto.
+#### Endpoints:
+- `/api/clientes`: Retorna a lista de todos os clientes.
+- `/api/clientes/{id}`: Retorna um cliente específico com base no ID fornecido.
+- `/api/clientes`: Cadastra um novo cliente.
+- `/api/clientes/{id}`: Atualiza as informações de um cliente existente.
+- `/api/clientes/{id}`: Exclui um cliente existente com base no ID fornecido.
+
+### ComprasController
+O ComprasController lida com as operações relacionadas às compras, como listar compras, obter uma compra por ID, cadastrar, atualizar e excluir uma compra.
+
+#### Endpoints:
+- `/api/compras`: Retorna a lista de todas as compras.
+- `/api/compras/{id}`: Retorna uma compra específica com base no ID fornecido.
+- `/api/compras`: Cadastra uma nova compra.
+- `/api/compras/{id}`: Atualiza as informações de uma compra existente.
+- `/api/compras/{id}`: Exclui uma compra existente com base no ID fornecido.
